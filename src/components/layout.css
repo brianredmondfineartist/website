@@ -166,7 +166,7 @@ p {
   }
   .homepage .intro {
     display: flex;
-    flex-flow: column-reverse nowrap;
+    flex-flow: column nowrap;
     margin-top: 100px;
     text-align: justify;
   }
@@ -266,6 +266,27 @@ p {
   }
 
 
+/* ----------------------- NEWS */
+
+.news {
+  flex-flow: column nowrap;
+}
+  .news h3 {
+    border-bottom: 1px solid #BFBABA;
+    padding-bottom: 5px;
+  }
+  .news h4 {
+    margin-bottom: 0;
+  }
+  .news h6 {
+    color: #BFBABA;
+    font-family: 'Crimson Text', serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 0;
+  }
+
+
 /* ----------------------- ORNAMENT */
 
 .ornament {
@@ -283,7 +304,7 @@ p {
     text-align: center;
   }
   .ornament--small:before {
-    font-size: 60px;
+    font-size: 46px;
   }
 
 
@@ -358,6 +379,13 @@ footer {
       padding: 20px;
       width: 100%;
     }
+  
+  .news {
+    padding: 50px;
+  }
+    .news .layout {
+      flex-flow: column nowrap;
+    }
 }
 
 
@@ -401,5 +429,10 @@ footer {
     .contact .intro {
       margin-left: 0;
       margin-right: 40px;
+    }
+  
+  .news {}
+    .news .layout {
+      padding-right: 30%;
     }
 }

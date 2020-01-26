@@ -27,6 +27,7 @@ const Header = () => (
     <ul className='menu'>
       <li><Link to="/" activeStyle={activeStyle}>Home</Link></li>
       <li>{PartialNavLink({ to: '/gallery', children: "Gallery" })}</li>
+      <li><Link to="/news" activeStyle={activeStyle}>News</Link></li>
       <li><Link to="/about" activeStyle={activeStyle}>About Artist</Link></li>
       <li><Link to="/contact" activeStyle={activeStyle}>Contact</Link></li>
     </ul>

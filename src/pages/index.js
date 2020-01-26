@@ -46,9 +46,11 @@ const IndexPage = () => {
             </figure>
           </div>
           
-          <div className='intro'
-            dangerouslySetInnerHTML={{ __html: content.homepage.html }}
-          />
+          <div className='intro'>
+            <div dangerouslySetInnerHTML={{ __html: content.homepage.html }} />
+
+            <hr className='ornament ornament--small' />
+          </div>
         </div>
       </section>
     </Layout>

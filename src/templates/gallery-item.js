@@ -19,15 +19,13 @@ export default ({ data }) => {
           <ul dangerouslySetInnerHTML={{
             __html: gallery.map((item, index) => 
               `<li>
-                <a href="${item.fields.slug.slice(0, -1)}#image" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a>
+                <a href="${item.fields.slug}" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a>
               </li>`
             ).join('')
           }} />
         </div>
 
         <div className='image'>
-          <a name="image"></a>
-
           <figure>
             <div className='frame'>
               <img src={image.frontmatter.filename.publicURL} alt={image.frontmatter.title} />
