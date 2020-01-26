@@ -41,9 +41,8 @@ const Gallery = () => {
           <ul dangerouslySetInnerHTML={{__html: gallery.map((item, index) => `<li><a href="${item.fields.slug.slice(0, -1)}#image" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a></li>`).join('')}} />
         </div>
 
+        <a name="image"></a>
         <div className='image'>
-          <a name="image"></a>
-
           <figure>
             <div className='frame'>
               <img src={image.frontmatter.filename.publicURL} alt={image.title} />
