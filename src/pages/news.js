@@ -21,7 +21,7 @@ const News = () => {
   `)
 
   const news = content.allMarkdownRemark.edges.map(item => item.node)
-  news.sort((a, b) => (a.frontmatter.date > b.frontmatter.date) ? 1 : -1)
+  news.sort((a, b) => (a.frontmatter.date < b.frontmatter.date) ? 1 : -1)
 
   const formatDate = date => date.split('T')[0]
 
@@ -36,8 +36,11 @@ const News = () => {
           <div className="layout">
             {news.map(item => (
               <>
-                <h4>{item.frontmatter.title}</h4>
-                <h6>{formatDate(item.frontmatter.date)}</h6>
+                <div className='title'>
+                  <span className='date'>{formatDate(item.frontmatter.date)}</span>
+                  <h4>{item.frontmatter.title}</h4>
+                </div>
+                
                 <div dangerouslySetInnerHTML={{ __html: item.html }} />
               </>
             ))}
