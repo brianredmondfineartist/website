@@ -386,6 +386,17 @@ footer {
     .news .layout {
       flex-flow: column nowrap;
     }
+    .news .title {
+      align-items: baseline;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .news .date {
+      color: #999;
+      font-weight: normal;
+      padding-right: 10px;
+      width: 80px;
+    }
 }
 
 
