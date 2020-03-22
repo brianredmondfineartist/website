@@ -2,9 +2,12 @@ module.exports = {
   siteMetadata: {
     title: `Brian Redmond - Fine Art Painter & Drawer`,
     description: `Brian is an Irish classical style oil painter and drawer. He follows traditional methods in oil paint, charcoal and graphite to create portrait, still life and landscape works.`,
-    author: `Ian Huet`,
+    url: `https://www.brianredmondfineartist.com`,
+    siteUrl: `https://www.brianredmondfineartist.com`,
+    author: 'Brian Redmond',
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     {
