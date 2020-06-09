@@ -27,9 +27,15 @@ const Gallery = () => {
   `)
 
   const gallery = content.allMarkdownRemark.edges.map(item => item.node)
+  gallery
+    .map(item => item.frontmatter.title = item.frontmatter.title
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' '))
   gallery.sort((a, b) => (a.frontmatter.title > b.frontmatter.title) ? 1 : -1)
-  const image = gallery[0]
 
+  const image = gallery[0]
   const isActiveLink = slug => slug === image.fields.slug ? `class='active'` : ''
 
   return (
