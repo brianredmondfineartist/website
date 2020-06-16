@@ -6,6 +6,12 @@ import SEO from "../components/seo"
 export default ({ data }) => {
   const image = data.image
   const gallery = data.gallery.edges.map(item => item.node)
+  gallery
+    .map(item => item.frontmatter.title = item.frontmatter.title
+      .toLowerCase()
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' '))
   gallery.sort((a, b) => (a.frontmatter.title > b.frontmatter.title) ? 1 : -1)
 
   const isActiveLink = slug => slug === image.fields.slug ? `class='active'` : ''

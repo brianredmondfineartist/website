@@ -45,10 +45,17 @@ h1 {
   font-weight: 100;
   line-height: 50px;
   margin: 0;
+  padding-bottom: 0;
+}
+hr {
+  background: linear-gradient(to right, #BFBABA, #fff);
+  border: 0;
+  height: 1px;
+  margin: 0;
 }
 h2 {
-  border-top: 1px solid #BFBABA;
   color: #BFBABA;
+  font-size: 18px;
   margin: 0;
 }
 p {
@@ -290,6 +297,7 @@ p {
 /* ----------------------- ORNAMENT */
 
 .ornament {
+  background: none;
   border: 0;
   clear: both;
   margin: 75px 0;
@@ -323,6 +331,9 @@ footer {
   h1 {
     font-size: 60px;
     line-height: 65px;
+  }
+  h2 {
+    font-size: 20px;
   }
 
   .layout {
@@ -401,6 +412,16 @@ footer {
 
 
 @media (min-width: 980px) {
+
+  h1 {
+    padding-bottom: 8px;     
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-left: 70px;
+  }
+
   .homepage {}
     .homepage .layout {
       align-items: flex-start;
@@ -410,6 +431,11 @@ footer {
     .homepage .intro {
       margin-left: 40px;
       max-width: 240px;
+    }
+
+  .menu {}
+    .menu li {
+      padding-right: 26px;
     }
 
   .gallery {
