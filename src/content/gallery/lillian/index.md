@@ -4,6 +4,6 @@ title: lillian
 slug: lillian
 medium: oil on canvas
 dimensions: 40” x 20”
-filename: lillian.JPG
+filename: lillian.jpg
 contact: true
 ---
