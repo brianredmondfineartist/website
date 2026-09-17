@@ -16,9 +16,8 @@ const Gallery = () => {
               medium
               title
               dimensions
-              filename {
-                publicURL
-              }
+              filename 
+              
             }
           }
         }
@@ -50,7 +49,7 @@ const Gallery = () => {
         <div className='image'>
           <figure>
             <div className='frame'>
-              <img src={image.frontmatter.filename.publicURL} alt={image.title} />
+              <img src={image.frontmatter.filename} alt={image.title} />
             </div>
             <figcaption>
               <dl>
