@@ -81,9 +81,9 @@ export const query = graphql`
         medium
         title
         dimensions
-        filename {
-          publicURL
-        }
+        filename 
+          
+  
       }
     }
     gallery: allMarkdownRemark(filter: {frontmatter: {path: {eq: "/gallery"}}}) {
@@ -96,9 +96,9 @@ export const query = graphql`
             medium
             title
             dimensions
-            filename {
-              publicURL
-            }
+            filename 
+              
+            
           }
         }
       }
