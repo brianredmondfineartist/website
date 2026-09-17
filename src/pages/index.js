@@ -16,9 +16,9 @@ const IndexPage = () => {
           image
           medium
           dimensions
-          filename {
-            publicURL
-          }
+          filename 
+            
+          
         }
       }
     }
@@ -33,7 +33,7 @@ const IndexPage = () => {
           <div className='image'>
             <figure>
               <div className='frame'>
-                <img src={content.image.frontmatter.filename.publicURL} alt={content.image.frontmatter.title} />
+                <img src={content.image.frontmatter.filename} alt={content.image.frontmatter.title} />
               </div>
 
               <figcaption>
