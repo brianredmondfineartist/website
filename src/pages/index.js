@@ -10,17 +10,20 @@ const IndexPage = () => {
       homepage: markdownRemark(frontmatter: {path: {eq: "/"}}) {
         html
       }
-      image: markdownRemark(frontmatter: {path: {eq: "/gallery"}, homepage: {eq: true}}) {
-        frontmatter {
-          title
-          image
-          medium
-          dimensions
-          filename 
+    image: markdownRemark(frontmatter: {path: {eq: "/gallery"}, homepage: {eq: true}}) {
+  frontmatter {
+    title
+    image
+    medium
+    dimensions
+  }
+}
+imageFile: file(relativePath: {eq: "gallery/xenia/xenia.jpg"}) {
+  publicURL
+}
             
           
-        }
-      }
+     
     }
   `)
 
@@ -33,7 +36,7 @@ const IndexPage = () => {
           <div className='image'>
             <figure>
               <div className='frame'>
-                <img src={content.image.frontmatter.filename} alt={content.image.frontmatter.title} />
+                <img src={content.imageFile.publicURL} alt={content.image.frontmatter.title} />
               </div>
 
               <figcaption>
