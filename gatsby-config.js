@@ -5,7 +5,7 @@ module.exports = {
     url: `https://www.brianredmondfineartist.com`,
     siteUrl: `https://www.brianredmondfineartist.com`,
     author: 'Brian Redmond',
-  },
+  },pathPrefix: `/website`,
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
