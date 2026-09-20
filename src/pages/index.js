@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
+ import { useStaticQuery, graphql, withPrefix } from "gatsby"
 
 const IndexPage = () => {
   const content = useStaticQuery(graphql`
@@ -36,7 +36,7 @@ imageFile: file(relativePath: {eq: "gallery/xenia/xenia.jpg"}) {
           <div className='image'>
             <figure>
               <div className='frame'>
-                <img src={content.imageFile.publicURL} alt={content.image.frontmatter.title} />
+           <img src={withPrefix(content.imageFile.publicURL)} alt={content.image.frontmatter.title} />
               </div>
 
               <figcaption>
