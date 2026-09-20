@@ -36,7 +36,7 @@ imageFile: file(relativePath: {eq: "gallery/xenia/xenia.jpg"}) {
           <div className='image'>
             <figure>
               <div className='frame'>
-           <img src={withPrefix(content.imageFile.publicURL)} alt={content.image.frontmatter.title} />
+           <img src="/website/static/xenia-ae1f55316874d67f5c34e0027e70f9b5.jpg" alt={content.image.frontmatter.title} />
               </div>
 
               <figcaption>
