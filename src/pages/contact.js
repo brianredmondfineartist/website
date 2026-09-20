@@ -39,7 +39,7 @@ const Contact = () => {
           <div className='image'>
             <figure>
               <div className='frame'>
-                <img src={content.image.frontmatter.filename alt={content.image.frontmatter.title} />
+                <img src={content.image.frontmatter.filename} alt={content.image.frontmatter.title} />
               </div>
 
               <figcaption>
