@@ -17,7 +17,7 @@ const Gallery = () => {
               title
               dimensions
               filename 
-  
+              slug
 
               
             }
@@ -45,7 +45,7 @@ const Gallery = () => {
 
       <section className='layout gallery'>
         <div className='list'>
-          <ul dangerouslySetInnerHTML={{__html: gallery.map((item, index) => `<li><a href="${item.fields.slug}" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a></li>`).join('')}} />
+          <ul dangerouslySetInnerHTML={{__html: gallery.map((item, index) => `<li><a href="/website/gallery/${item.fields.slug}" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a></li>`).join('')}} />
         </div>
 
         <div className='image'>
