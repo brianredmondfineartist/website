@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -51,7 +51,7 @@ const Gallery = () => {
         <div className='image'>
           <figure>
             <div className='frame'>
-            <img src={`/website/gallery/${image.fields.slug}/${image.frontmatter.filename}`} alt={image.title} />
+          <img src={withPrefix(image.parent.childImageSharp.fixed.src)} alt={image.title} />
             </div>
             <figcaption>
               <dl>
