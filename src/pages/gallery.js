@@ -51,7 +51,7 @@ const Gallery = () => {
         <div className='image'>
           <figure>
             <div className='frame'>
-          <img src={withPrefix(image.parent.childImageSharp.fixed.src)} alt={image.title} />
+        <img src={withPrefix(image.parent.publicURL)} alt={image.title} />
             </div>
             <figcaption>
               <dl>
