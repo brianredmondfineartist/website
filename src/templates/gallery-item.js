@@ -81,8 +81,10 @@ export const query = graphql`
         medium
         title
         dimensions
-        filename 
-          
+                 filename {
+  publicURL
+}
+
   
       }
     }
@@ -96,7 +98,9 @@ export const query = graphql`
             medium
             title
             dimensions
-            filename 
+         filename {
+  publicURL
+}
               
             
           }
