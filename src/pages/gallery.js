@@ -18,6 +18,11 @@ const Gallery = () => {
               dimensions
               filename 
               slug
+              parent {
+  ... on File {
+    publicURL
+  }
+}
 
               
             }
