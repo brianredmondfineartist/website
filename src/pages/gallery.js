@@ -56,7 +56,7 @@ const Gallery = () => {
         <div className='image'>
           <figure>
             <div className='frame'>
-<img src={imageFile.publicURL} alt={image.frontmatter.title} />
+<img src={withPrefix(imageFile.publicURL)} alt={image.frontmatter.title} />
             </div>
             <figcaption>
               <dl>
