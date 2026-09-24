@@ -12,22 +12,25 @@ const Gallery = () => {
             fields {
               slug
             }
+
+}
             frontmatter {
               medium
               title
               dimensions
               filename 
               slug
-              parent {
-  
-
-
-              
-            }
+        
           }
         }
       }
     }  
+    allFile(filter: {sourceInstanceName: {eq: "gallery"}}) {
+  nodes {
+    relativePath
+    publicURL
+  }
+}
   `)
 
   const gallery = content.allMarkdownRemark.edges.map(item => item.node)
