@@ -40,7 +40,8 @@ const Gallery = () => {
   gallery.sort((a, b) => (a.frontmatter.title > b.frontmatter.title) ? 1 : -1)
 
   const image = gallery[0]
- const imageFile = content.allFile.nodes.find(file => file.relativePath.endsWith(image.frontmatter.filename))
+  const imageFile = content.allFile.nodes.find(file => file.relativePath.endsWith(image.frontmatter.filename))
+ 
   const isActiveLink = slug => slug === image.fields.slug ? `class='active'` : ''
 
   return (
@@ -55,7 +56,7 @@ const Gallery = () => {
         <div className='image'>
           <figure>
             <div className='frame'>
-<img src={withPrefix(imageFile.publicURL)} alt={image.frontmatter.title} />
+<img src={imageFile.publicURL} alt={image.frontmatter.title} />
             </div>
             <figcaption>
               <dl>
