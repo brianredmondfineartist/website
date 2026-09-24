@@ -5,34 +5,31 @@ import SEO from "../components/seo"
 
 const Gallery = () => {
   const content = useStaticQuery(graphql`
-    query getGalleryImages {
-      allMarkdownRemark(filter: {frontmatter: {path: {eq: "/gallery"}}}) {
-        edges {
-          node {
-            fields {
-              slug
-            }
-
-}
-            frontmatter {
-              medium
-              title
-              dimensions
-              filename 
-              slug
-        
+  query getGalleryImages {
+    allMarkdownRemark(filter: {frontmatter: {path: {eq: "/gallery"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            medium
+            title
+            dimensions
+            filename
+            slug
           }
         }
       }
-    }  
+    }
     allFile(filter: {sourceInstanceName: {eq: "gallery"}}) {
-  nodes {
-    relativePath
-    publicURL
+      nodes {
+        relativePath
+        publicURL
+      }
+    }
   }
-}
-  `)
-
+`)
   const gallery = content.allMarkdownRemark.edges.map(item => item.node)
   gallery
     .map(item => item.frontmatter.title = item.frontmatter.title
