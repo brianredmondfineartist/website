@@ -40,6 +40,7 @@ const Gallery = () => {
   gallery.sort((a, b) => (a.frontmatter.title > b.frontmatter.title) ? 1 : -1)
 
   const image = gallery[0]
+ const imageFile = content.allFile.nodes.find(file => file.relativePath === `${image.fields.slug}/${image.frontmatter.filename}`) 
   const isActiveLink = slug => slug === image.fields.slug ? `class='active'` : ''
 
   return (
