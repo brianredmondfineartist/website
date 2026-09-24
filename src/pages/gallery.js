@@ -19,10 +19,8 @@ const Gallery = () => {
               filename 
               slug
               parent {
-  ... on File {
-    publicURL
-  }
-}
+  
+
 
               
             }
