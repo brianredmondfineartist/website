@@ -34,7 +34,7 @@ export default ({ data }) => {
         <div className='image'>
           <figure>
             <div className='frame'>
-              <img src={image.frontmatter.filename.publicURL} alt={image.frontmatter.title} />
+             <img src={image.frontmatter.filename} alt={image.frontmatter.title} />
             </div>
             <figcaption>
               <dl>
