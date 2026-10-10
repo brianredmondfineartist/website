@@ -25,7 +25,7 @@ export default ({ data }) => {
           <ul dangerouslySetInnerHTML={{
             __html: gallery.map((item, index) => 
               `<li>
-                <a href="${item.fields.slug}" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a>
+               <a href="/gallery/${item.fields.slug}" key="item-${index}" ${isActiveLink(item.fields.slug)}>${item.frontmatter.title}</a>
               </li>`
             ).join('')
           }} />
