@@ -7,7 +7,7 @@ export default ({ data }) => {
   const image = data.image
   const gallery = data.gallery.edges.map(item => item.node)
   gallery
-    .map(item => item.frontmatter.title = item.frontmatter.title
+    .map(item => item.frontmatter.title = item.frontmatter.title       
       .toLowerCase()
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -34,7 +34,7 @@ export default ({ data }) => {
         <div className='image'>
           <figure>
             <div className='frame'>
-             <img src={image.frontmatter.filename} alt={image.frontmatter.title} />
+             <img src={image.frontmatter.filename.publicURL} alt={image.frontmatter.title} />
             </div>
             <figcaption>
               <dl>
