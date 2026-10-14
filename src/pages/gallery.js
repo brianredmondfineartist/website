@@ -22,7 +22,8 @@ const Gallery = () => {
         }
       }
     }
- allFile {
+    }
+ allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
       nodes {
         relativePath
         publicURL
